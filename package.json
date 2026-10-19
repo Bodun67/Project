@@ -1,0 +1,9 @@
+{
+  "name": "osinnia-kava",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Осіння кав'ярня у затишному провулку",
+  "scripts": {
+    "dev": "node server.mjs"
+  }
+}
