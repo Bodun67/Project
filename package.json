@@ -4,6 +4,7 @@
   "private": true,
   "description": "Осіння кав'ярня у затишному провулку",
   "scripts": {
-    "dev": "node server.mjs"
+    "dev": "node server.mjs",
+    "build": "node build.mjs"
   }
 }

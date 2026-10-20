@@ -3,64 +3,122 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Осіння Кава — затишна кав'ярня у старому провулку." />
+    <meta name="description" content="Осіння Кава — затишна кав'ярня, сезонне меню та щоденний бонус від котика." />
+    <meta name="theme-color" content="#241814" />
     <title>Осіння Кава — затишок у кожній чашці</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#home" aria-label="Осіння Кава, на головну"><span class="brand-mark">☕</span><span>Осіння<br /><b>Кава</b></span></a>
+      <a class="brand" href="#home" aria-label="Осіння Кава, на головну">
+        <span class="brand-mark" aria-hidden="true">☕</span>
+        <span data-i18n="brand">Осіння Кава</span>
+      </a>
       <nav class="nav" aria-label="Головна навігація">
-        <a href="#story">Наша історія</a><a href="#menu">Меню</a><a href="#beans">Зерно</a><a href="#contact">Контакти</a>
+        <a href="#story" data-i18n="navStory">Наша історія</a>
+        <a href="#menu" data-i18n="navMenu">Меню</a>
+        <a href="#beans" data-i18n="navBeans">Зерно</a>
+        <a href="#contact" data-i18n="navContact">Контакти</a>
       </nav>
-      <a class="header-cta" href="#menu">Замовити каву <span>↗</span></a>
+      <div class="header-actions">
+        <button class="language-switch" id="language-switch" type="button" aria-label="Switch to English">EN</button>
+        <a class="header-cta" href="#menu"><span data-i18n="orderCoffee">Обрати каву</span> <b aria-hidden="true">↗</b></a>
+      </div>
     </header>
 
     <main>
       <section class="hero" id="home">
-        <div class="alley-scene" aria-hidden="true"><div class="building building-left"></div><div class="building building-right"></div><div class="cafe-front"><span class="awning"></span><span class="window window-a"></span><span class="window window-b"></span><span class="door"></span></div><span class="lamp">✦</span><span class="leaf leaf-1">✦</span><span class="leaf leaf-2">❧</span><span class="leaf leaf-3">✦</span><span class="leaf leaf-4">❧</span><span class="leaf leaf-5">✦</span><div class="street"></div></div>
         <div class="hero-copy">
-          <p class="eyebrow"><span></span> кав'ярня у старому провулку</p>
-          <h1>Тепло, яке<br /><i>можна скуштувати.</i></h1>
-          <p class="hero-lead">Кава повільного ранку, запах кориці й маленька втеча від шумного міста.</p>
-          <div class="hero-actions"><a class="button button-primary" href="#menu">Дивитися меню <span>↓</span></a><a class="text-link" href="#story">Дізнатися нашу історію <span>→</span></a></div>
+          <p class="eyebrow"><span></span><b data-i18n="heroEyebrow">кав’ярня в осінньому провулку</b></p>
+          <h1><span data-i18n="heroTitleTop">Тепло, яке</span><strong data-i18n="heroTitleBottom">можна скуштувати.</strong></h1>
+          <p class="hero-lead" data-i18n="heroLead">Кава повільного ранку, запах кориці й маленька втеча від шумного міста.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#menu"><span data-i18n="viewMenu">Дивитися меню</span><b aria-hidden="true">↓</b></a>
+            <a class="text-link" href="#story"><span data-i18n="learnStory">Дізнатися нашу історію</span> <b aria-hidden="true">→</b></a>
+          </div>
         </div>
-        <div class="hero-note"><span>01 / 04</span><span>Сезонний настрій</span></div>
-        <div class="scroll-cue">Гортайте вниз <span>↓</span></div>
+        <div class="hero-photo-note"><span aria-hidden="true">●</span><span data-i18n="heroPhotoNote">Осінній вечір у нашому провулку</span></div>
+        <div class="scroll-cue"><span data-i18n="scrollDown">Гортайте вниз</span><b aria-hidden="true">↓</b></div>
       </section>
 
       <section class="story section" id="story">
-        <div class="section-kicker">01 — Про нас</div>
-        <div class="story-grid"><div><h2>Місце, де<br /><em>час сповільнюється.</em></h2></div><div><p class="intro">Ми знайшли цей маленький провулок, коли шукали місце для першої кавомашини. Тепер тут щодня пахне свіжомеленими зернами, мокрим листям і домашнім пирогом.</p><p class="muted">Заходьте на п'ять хвилин або залишайтеся на весь день. У нас є розетка біля вікна, плед для прохолодних вечорів і завжди вільний стілець для тих, хто прийшов сам.</p><a class="round-link" href="#contact">Знайти нас <span>↗</span></a></div></div>
-        <div class="story-stats"><div><b>2019</b><span>відкрили двері</span></div><div><b>12</b><span>видів зерна</span></div><div><b>08:00</b><span>починаємо варити</span></div></div>
+        <div class="section-kicker" data-i18n="storyKicker">01 — Про нас</div>
+        <div class="story-grid">
+          <div><h2><span data-i18n="storyTitleTop">Місце, де</span><em data-i18n="storyTitleBottom">час сповільнюється.</em></h2></div>
+          <div>
+            <p class="intro" data-i18n="storyIntro">Ми створили маленьку кав’ярню, де за вікном шелестить листя, а всередині пахне свіжозмеленим зерном і теплою випічкою.</p>
+            <p class="muted" data-i18n="storyText">Заходьте на п’ять хвилин або залишайтеся на весь день. Біля вікна є розетка, для прохолодних вечорів — пледи, а для кожного гостя — зручне місце.</p>
+            <a class="round-link" href="#contact"><span data-i18n="findUs">Знайти нас</span><b aria-hidden="true">↗</b></a>
+          </div>
+        </div>
+        <div class="story-stats">
+          <div><b>2019</b><span data-i18n="statOpened">відкрили двері</span></div>
+          <div><b>18</b><span data-i18n="statMenu">позицій у меню</span></div>
+          <div><b>08:00</b><span data-i18n="statStart">починаємо варити</span></div>
+        </div>
       </section>
 
       <section class="menu-section section" id="menu">
-        <div class="section-heading"><div><div class="section-kicker">02 — Наше меню</div><h2>Обери свій<br /><em>теплий момент.</em></h2></div><p>Меню змінюється разом із сезоном. Ціни вказані за одну порцію.</p></div>
-        <div class="menu-grid">
-          <article class="menu-card featured"><div class="card-top"><span class="card-icon">☕</span><span class="tag">популярне</span></div><h3>Гарбузовий лате</h3><p>Еспресо, молоко, домашній сироп із гарбуза та дрібка мускатного горіха.</p><div class="price">145 <small>₴</small></div></article>
-          <article class="menu-card"><div class="card-top"><span class="card-icon">◒</span><span class="tag">класика</span></div><h3>Флет вайт</h3><p>Подвійний еспресо та шовковисте молоко з легкою горіховою нотою.</p><div class="price">110 <small>₴</small></div></article>
-          <article class="menu-card"><div class="card-top"><span class="card-icon">✿</span><span class="tag">солодке</span></div><h3>Булочка з корицею</h3><p>М'яке тісто, кориця, коричневий цукор і вершкова глазур.</p><div class="price">95 <small>₴</small></div></article>
-          <article class="menu-card"><div class="card-top"><span class="card-icon">◉</span><span class="tag">без кофеїну</span></div><h3>Матча-лате</h3><p>Японська матча, збите молоко та медова солодкість у керамічній чашці.</p><div class="price">130 <small>₴</small></div></article>
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker" data-i18n="menuKicker">02 — Наше меню</div>
+            <h2><span data-i18n="menuTitleTop">Більше смаків</span><em data-i18n="menuTitleBottom">для вашої осені.</em></h2>
+          </div>
+          <p data-i18n="menuIntro">Класика, сезонні напої та свіжа випічка. Ціни вказані за одну порцію.</p>
+        </div>
+        <div class="menu-group">
+          <div class="menu-group-heading"><h3 data-i18n="coffeeHeading">Кава та теплі напої</h3><span data-i18n="coffeeCount">10 позицій</span></div>
+          <div class="menu-grid" id="coffee-menu"></div>
+        </div>
+        <div class="menu-group">
+          <div class="menu-group-heading"><h3 data-i18n="pastryHeading">Випічка та десерти</h3><span data-i18n="pastryCount">8 позицій</span></div>
+          <div class="menu-grid" id="pastry-menu"></div>
         </div>
       </section>
 
       <section class="beans section" id="beans">
-        <div class="beans-copy">
-          <div class="section-kicker">03 — Зерно додому</div>
-          <h2>Смак, який<br /><em>хочеться забрати.</em></h2>
-          <p><b>Foundation Coffee Roasters</b> — українська обсмажувальня з Одеси, яка працює з кав’ярнями. У каталозі є зерно для еспресо й фільтра, суміші та кава без кофеїну. Актуальний асортимент і ціни дивіться на сайті обсмажувальні.</p>
-          <a class="button button-light" href="https://foundation.ua/kava-foundation" target="_blank" rel="noopener noreferrer">Переглянути зерно <span>↗</span></a>
+        <div class="beans-heading">
+          <div class="section-kicker" data-i18n="beansKicker">03 — Оберіть своє зерно</div>
+          <h2><span data-i18n="beansTitleTop">Характер кави</span><em data-i18n="beansTitleBottom">починається із зерна.</em></h2>
+          <p data-i18n="beansIntro">Для кожного способу приготування підбираємо сорт і обсмаження, які найкраще розкривають смак.</p>
         </div>
-        <div class="bean-bag"><span class="bag-label">ОСІННЯ<br /><b>КАВА</b><small>house blend / 250 g</small></span></div>
-        <div class="bean-note">Ноти шоколаду<br />карамелі та сливи</div>
+        <div class="variety-grid">
+          <article class="variety-card arabica"><span class="variety-number">01</span><h3>Arabica</h3><p data-i18n="arabicaText">М’яка й ароматна: квіти, ягоди, карамель і делікатна кислинка. Ідеальна для фільтра та ніжного еспресо.</p><small data-i18n="arabicaNote">100% арабіка · середнє обсмаження</small></article>
+          <article class="variety-card robusta"><span class="variety-number">02</span><h3>Robusta</h3><p data-i18n="robustaText">Насичена й міцна: темний шоколад, горіхи та щільна крема. Більше кофеїну й виразний післясмак.</p><small data-i18n="robustaNote">100% робуста · темне обсмаження</small></article>
+          <article class="variety-card blend"><span class="variety-number">03</span><h3>House Blend</h3><p data-i18n="blendText">Збалансований бленд арабіки та робусти: солодкість, міцність і стабільний смак у молочних напоях.</p><small data-i18n="blendNote">80/20 · еспресо-бленд</small></article>
+        </div>
+        <div class="supplier-row">
+          <p><b>Foundation Coffee Roasters</b><span data-i18n="supplierText"> — українська обсмажувальня з каталогом зерна для еспресо, фільтра та кави без кофеїну.</span></p>
+          <a class="button button-light" href="https://foundation.ua/kava-foundation" target="_blank" rel="noopener noreferrer"><span data-i18n="viewBeans">Переглянути зерно</span><b aria-hidden="true">↗</b></a>
+        </div>
       </section>
 
-      <section class="contact section" id="contact"><div class="section-kicker">04 — Завітайте</div><div class="contact-grid"><div><h2>Зустрінемось<br /><em>на каві?</em></h2><p class="intro">Провулок Листопадовий, 7<br />Київ, 01001</p><p class="muted">Пн–Пт: 08:00–20:00<br />Сб–Нд: 09:00–21:00</p></div><form id="contact-form"><label>Ваше ім'я<input name="name" type="text" placeholder="Як до вас звертатися?" required /></label><label>Повідомлення<textarea name="message" placeholder="Забронювати столик або запитати щось..." required></textarea></label><button class="button button-primary" type="submit">Написати нам <span>→</span></button><p class="form-status" id="form-status" role="status"></p></form></div></section>
+      <section class="contact section" id="contact">
+        <div class="section-kicker" data-i18n="contactKicker">04 — Завітайте</div>
+        <div class="contact-grid">
+          <div><h2><span data-i18n="contactTitleTop">Зустрінемось</span><em data-i18n="contactTitleBottom">на каві?</em></h2><p class="intro" data-i18n="address">Провулок Листопадовий, 7<br />Київ, 01001</p><p class="muted" data-i18n="hours">Пн–Пт: 08:00–20:00<br />Сб–Нд: 09:00–21:00</p></div>
+          <form id="contact-form">
+            <label><span data-i18n="nameLabel">Ваше ім’я</span><input name="name" type="text" data-i18n-placeholder="namePlaceholder" placeholder="Як до вас звертатися?" required /></label>
+            <label><span data-i18n="messageLabel">Повідомлення</span><textarea name="message" data-i18n-placeholder="messagePlaceholder" placeholder="Забронювати столик або запитати щось..." required></textarea></label>
+            <button class="button button-primary" type="submit"><span data-i18n="sendButton">Написати нам</span><b aria-hidden="true">→</b></button>
+            <p class="form-status" id="form-status" role="status"></p>
+          </form>
+        </div>
+      </section>
     </main>
 
-    <aside class="cat-widget" aria-label="Щоденний бонус від котика"><div class="cat-speech" id="cat-speech">Погладь мене — отримай бонус ☕</div><button class="cat-button" id="cat-button" aria-label="Погладити котика"><span class="cat-ear left"></span><span class="cat-ear right"></span><span class="cat-face"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="nose"></i><i class="mouth"></i><i class="whisker w-left"></i><i class="whisker w-right"></i></span><span class="cat-paw paw-left"></span><span class="cat-paw paw-right"></span></button><div class="bonus-meter"><span id="bonus-fill"></span></div><small id="bonus-label">0 / 1 бонус сьогодні</small></aside>
-    <footer><span>© 2024 Осіння Кава</span><span>Зроблено повільно, з любов'ю ☕</span><a href="#home">На початок ↑</a></footer>
+    <aside class="cat-widget" aria-labelledby="cat-title">
+      <div class="cat-copy"><span class="cat-badge" data-i18n="dailyBonus">Щоденний бонус</span><strong id="cat-title" data-i18n="catTitle">Котик Мурчик</strong><p id="cat-speech" data-i18n="catPrompt">Натисніть на котика: він підморгне, замуркоче й подарує знижку.</p></div>
+      <button class="cat-button" id="cat-button" type="button" aria-label="Погладити котика й отримати бонус">
+        <span class="cat-ear left"></span><span class="cat-ear right"></span><span class="cat-face"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="nose"></i><i class="mouth"></i><i class="whisker w-left"></i><i class="whisker w-right"></i></span><span class="cat-paw paw-left"></span><span class="cat-paw paw-right"></span><span class="tap-ring" aria-hidden="true"></span>
+      </button>
+      <div class="bonus-status"><div class="bonus-meter" aria-hidden="true"><span id="bonus-fill"></span></div><small id="bonus-label">0 / 1 бонус сьогодні</small></div>
+    </aside>
+
+    <footer><span>© <span id="year"></span> <span data-i18n="brand">Осіння Кава</span></span><span data-i18n="footerMade">Зроблено повільно, з любов’ю ☕</span><a href="#home" data-i18n="backTop">На початок ↑</a></footer>
     <script src="script.js"></script>
   </body>
 </html>
