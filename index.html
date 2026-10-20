@@ -31,6 +31,7 @@
 
     <main>
       <section class="hero" id="home">
+        <div class="falling-leaves" id="falling-leaves" aria-hidden="true"></div>
         <div class="hero-copy">
           <p class="eyebrow"><span></span><b data-i18n="heroEyebrow">кав’ярня в осінньому провулку</b></p>
           <h1><span data-i18n="heroTitleTop">Тепло, яке</span><strong data-i18n="heroTitleBottom">можна скуштувати.</strong></h1>
@@ -41,7 +42,7 @@
           </div>
         </div>
         <div class="hero-photo-note"><span aria-hidden="true">●</span><span data-i18n="heroPhotoNote">Осінній вечір у нашому провулку</span></div>
-        <div class="scroll-cue"><span data-i18n="scrollDown">Гортайте вниз</span><b aria-hidden="true">↓</b></div>
+        <a class="scroll-cue" href="#story"><span data-i18n="scrollDown">Гортайте вниз</span><b aria-hidden="true"><i></i></b></a>
       </section>
 
       <section class="story section" id="story">
@@ -116,7 +117,14 @@
         <span class="cat-ear left"></span><span class="cat-ear right"></span><span class="cat-face"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="nose"></i><i class="mouth"></i><i class="whisker w-left"></i><i class="whisker w-right"></i></span><span class="cat-paw paw-left"></span><span class="cat-paw paw-right"></span><span class="tap-ring" aria-hidden="true"></span>
       </button>
       <div class="bonus-status"><div class="bonus-meter" aria-hidden="true"><span id="bonus-fill"></span></div><small id="bonus-label">0 / 1 бонус сьогодні</small></div>
+      <div class="bonus-stats" aria-live="polite">
+        <div><b id="bonus-balance">0</b><span data-i18n="bonusBalance">Баланс</span></div>
+        <div><b id="bonus-total">0</b><span data-i18n="bonusTotal">Отримано</span></div>
+        <div><b id="bonus-streak">0</b><span data-i18n="bonusStreak">Серія днів</span></div>
+      </div>
     </aside>
+
+    <audio id="purr-audio" preload="auto" src="assets/cat-purr.ogg"></audio>
 
     <footer><span>© <span id="year"></span> <span data-i18n="brand">Осіння Кава</span></span><span data-i18n="footerMade">Зроблено повільно, з любов’ю ☕</span><a href="#home" data-i18n="backTop">На початок ↑</a></footer>
     <script src="script.js"></script>
